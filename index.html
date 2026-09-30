@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Juicers — Cocktails for the After Hours</title>
+  <meta name="description" content="Crafted cocktails for high-end events, raves and everything after dark. Portable rave packs, signature cocktail mixes and ready-to-pour cocktails.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Syne:wght@500;700;800&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Age gate -->
+  <div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageTitle">
+    <div class="age-gate__inner">
+      <span class="wordmark wordmark--lg">JUICERS</span>
+      <p class="eyebrow">Est. for the after hours</p>
+      <h2 id="ageTitle" class="age-gate__title">Are you of legal drinking age?</h2>
+      <div class="age-gate__actions">
+        <button class="btn btn--gold" id="ageYes">Yes, enter</button>
+        <button class="btn btn--ghost" id="ageNo">Not yet</button>
+      </div>
+      <p class="age-gate__fine" id="ageMsg">Please enjoy responsibly. By entering you agree to our terms.</p>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <header class="nav" id="nav">
+    <a href="#top" class="wordmark">JUICERS</a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#collections">Collections</a>
+      <a href="#rave">Rave Packs</a>
+      <a href="#mixes">Mixes</a>
+      <a href="#ready">Ready to Pour</a>
+      <a href="#events">Events</a>
+    </nav>
+    <a href="#enquire" class="btn btn--gold btn--sm nav__cta">Book Us</a>
+    <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero__glow hero__glow--a"></div>
+      <div class="hero__glow hero__glow--b"></div>
+      <div class="hero__content">
+        <p class="eyebrow reveal">Cocktails for the after hours</p>
+        <h1 class="hero__title reveal">
+          <span class="serif-italic">Poured</span> for the<br>
+          <span class="display">night that</span><br>
+          <span class="display display--outline">never ends.</span>
+        </h1>
+        <p class="hero__lede reveal">
+          Bar-grade cocktails built to travel — from black-tie galas to warehouse floors at 4am.
+          Crafted with real spirits, cold-pressed juice and zero compromise.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#collections" class="btn btn--gold">Explore the collections</a>
+          <a href="#enquire" class="btn btn--ghost">Book for an event →</a>
+        </div>
+      </div>
+
+      <div class="hero__visual reveal" aria-hidden="true">
+        <!-- Stylised bottle -->
+        <svg viewBox="0 0 260 520" class="hero__bottle">
+          <defs>
+            <linearGradient id="glass" x1="0" x2="1">
+              <stop offset="0" stop-color="#1b1210"/>
+              <stop offset=".35" stop-color="#3a1d1a"/>
+              <stop offset=".55" stop-color="#6b2a22"/>
+              <stop offset="1" stop-color="#140c0b"/>
+            </linearGradient>
+            <linearGradient id="liquid" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#c8553d"/>
+              <stop offset="1" stop-color="#5a1410"/>
+            </linearGradient>
+            <linearGradient id="goldG" x1="0" x2="1">
+              <stop offset="0" stop-color="#8f6b35"/>
+              <stop offset=".5" stop-color="#e9cf95"/>
+              <stop offset="1" stop-color="#8f6b35"/>
+            </linearGradient>
+          </defs>
+          <rect x="104" y="10" width="52" height="46" rx="4" fill="url(#goldG)"/>
+          <path d="M108 56 h44 v46 c0 22 58 40 58 92 v278 c0 20 -14 32 -32 32 h-96 c-18 0 -32 -12 -32 -32 v-278 c0 -52 58 -70 58 -92z" fill="url(#glass)" stroke="#e9cf95" stroke-opacity=".25"/>
+          <path d="M56 230 h148 v242 c0 14 -10 24 -24 24 h-100 c-14 0 -24 -10 -24 -24z" fill="url(#liquid)" opacity=".85"/>
+          <rect x="64" y="270" width="132" height="150" fill="#0d0908" stroke="url(#goldG)" stroke-width="1.5"/>
+          <text x="130" y="318" text-anchor="middle" fill="#e9cf95" font-family="Syne" font-weight="800" font-size="18" letter-spacing="4">JUICERS</text>
+          <line x1="90" y1="334" x2="170" y2="334" stroke="#e9cf95" stroke-opacity=".5"/>
+          <text x="130" y="362" text-anchor="middle" fill="#f3ebe0" font-family="Cormorant Garamond" font-style="italic" font-size="20">Velvet Hour</text>
+          <text x="130" y="398" text-anchor="middle" fill="#a99a88" font-family="Manrope" font-size="8" letter-spacing="2">NEGRONI · BLOOD ORANGE</text>
+          <path d="M84 110 c-10 30 -14 80 -14 120" stroke="#fff" stroke-opacity=".12" stroke-width="6" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div class="hero__badge">
+          <span class="hero__badge-num">100%</span>
+          <span class="hero__badge-text">real spirits<br>no syrups</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Galas</span><i>✦</i><span>Warehouse raves</span><i>✦</i><span>Private yachts</span><i>✦</i><span>Fashion week</span><i>✦</i><span>Festivals</span><i>✦</i><span>Launch nights</span><i>✦</i><span>Weddings</span><i>✦</i><span>Afterparties</span><i>✦</i>
+        <span>Galas</span><i>✦</i><span>Warehouse raves</span><i>✦</i><span>Private yachts</span><i>✦</i><span>Fashion week</span><i>✦</i><span>Festivals</span><i>✦</i><span>Launch nights</span><i>✦</i><span>Weddings</span><i>✦</i><span>Afterparties</span><i>✦</i>
+      </div>
+    </div>
+
+    <!-- Collections overview -->
+    <section class="section" id="collections">
+      <div class="section__head reveal">
+        <p class="eyebrow">The collections</p>
+        <h2 class="section__title">Three ways to <span class="serif-italic">raise</span> the night.</h2>
+      </div>
+
+      <div class="collections">
+        <a href="#rave" class="collection collection--rave reveal">
+          <span class="collection__num">01</span>
+          <div class="collection__art" aria-hidden="true">
+            <svg viewBox="0 0 120 160"><rect x="30" y="28" width="60" height="112" rx="14" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="60" cy="18" r="12" fill="none" stroke="currentColor" stroke-width="2"/><rect x="50" y="26" width="20" height="10" fill="currentColor"/><path d="M30 92 h60" stroke="currentColor" stroke-width="2"/><path d="M42 110 l8 -8 8 8 8 -8 8 8" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+          </div>
+          <h3 class="collection__title">Rave Packs</h3>
+          <p class="collection__desc">Portable, clip-on cocktail pouches built for the dancefloor. Hands free, glass free, all night.</p>
+          <span class="collection__link">Shop rave packs →</span>
+        </a>
+
+        <a href="#mixes" class="collection collection--mix reveal">
+          <span class="collection__num">02</span>
+          <div class="collection__art" aria-hidden="true">
+            <svg viewBox="0 0 120 160"><path d="M44 20 h32 v30 c0 8 18 16 18 34 v56 c0 6 -4 10 -10 10 h-48 c-6 0 -10 -4 -10 -10 v-56 c0 -18 18 -26 18 -34z" fill="none" stroke="currentColor" stroke-width="2"/><rect x="42" y="10" width="36" height="10" fill="currentColor"/><path d="M26 100 h68" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3 class="collection__title">Signature Mixes</h3>
+          <p class="collection__desc">Bar-crafted cocktail bases for galas, weddings and private dinners. Just add spirit, ice and theatre.</p>
+          <span class="collection__link">Shop mixes →</span>
+        </a>
+
+        <a href="#ready" class="collection collection--ready reveal">
+          <span class="collection__num">03</span>
+          <div class="collection__art" aria-hidden="true">
+            <svg viewBox="0 0 120 160"><rect x="36" y="24" width="48" height="120" rx="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M40 24 c0 -8 40 -8 40 0" fill="none" stroke="currentColor" stroke-width="2"/><path d="M36 60 h48 M36 112 h48" stroke="currentColor" stroke-width="2"/><circle cx="60" cy="86" r="10" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3 class="collection__title">Ready to Pour</h3>
+          <p class="collection__desc">Finished cocktails in cans and bottles. Chill, crack, pour. Bartender-quality with zero setup.</p>
+          <span class="collection__link">Shop ready to pour →</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Rave packs -->
+    <section class="feature feature--rave" id="rave">
+      <div class="feature__intro reveal">
+        <p class="eyebrow eyebrow--acid">01 — Rave Packs</p>
+        <h2 class="feature__title">Built for the<br><span class="display">dance floor.</span></h2>
+        <p class="feature__text">
+          Soft-pouch cocktails with a clip-on carabiner, resealable spout and a pack that fits a bumbag.
+          No glass, no spills, no queue at the bar. Each pack is sealed, portioned and ready the second the bass drops.
+        </p>
+        <ul class="ticks">
+          <li>Shatterproof, festival-safe pouches</li>
+          <li>Resealable spout + carabiner clip</li>
+          <li>Electrolyte-balanced low-sugar recipes</li>
+        </ul>
+      </div>
+
+      <div class="products">
+        <article class="product product--acid reveal">
+          <div class="product__tag">Bestseller</div>
+          <div class="product__visual" style="--c1:#d4ff3a;--c2:#3a4d00">
+            <svg viewBox="0 0 100 140" aria-hidden="true"><circle cx="50" cy="12" r="8" fill="none" stroke="#d4ff3a" stroke-width="2"/><rect x="24" y="22" width="52" height="110" rx="16" class="pouch"/></svg>
+          </div>
+          <h3 class="product__name">Strobe</h3>
+          <p class="product__notes">Tequila · lime · green chilli · agave</p>
+          <div class="product__foot"><span class="product__price">$64 <small>/ 6 pack</small></span><button class="btn btn--sm btn--line" data-add="Strobe Rave Pack">Add</button></div>
+        </article>
+
+        <article class="product product--acid reveal">
+          <div class="product__visual" style="--c1:#ff3ec9;--c2:#4a0838">
+            <svg viewBox="0 0 100 140" aria-hidden="true"><circle cx="50" cy="12" r="8" fill="none" stroke="#ff3ec9" stroke-width="2"/><rect x="24" y="22" width="52" height="110" rx="16" class="pouch"/></svg>
+          </div>
+          <h3 class="product__name">Afterhours</h3>
+          <p class="product__notes">Vodka · passionfruit · yuzu · soda</p>
+          <div class="product__foot"><span class="product__price">$64 <small>/ 6 pack</small></span><button class="btn btn--sm btn--line" data-add="Afterhours Rave Pack">Add</button></div>
+        </article>
+
+        <article class="product product--acid reveal">
+          <div class="product__tag">New</div>
+          <div class="product__visual" style="--c1:#3ee6ff;--c2:#06303a">
+            <svg viewBox="0 0 100 140" aria-hidden="true"><circle cx="50" cy="12" r="8" fill="none" stroke="#3ee6ff" stroke-width="2"/><rect x="24" y="22" width="52" height="110" rx="16" class="pouch"/></svg>
+          </div>
+          <h3 class="product__name">Sub Bass</h3>
+          <p class="product__notes">Gin · cucumber · elderflower · mint</p>
+          <div class="product__foot"><span class="product__price">$64 <small>/ 6 pack</small></span><button class="btn btn--sm btn--line" data-add="Sub Bass Rave Pack">Add</button></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Signature mixes -->
+    <section class="feature feature--mix" id="mixes">
+      <div class="feature__intro reveal">
+        <p class="eyebrow">02 — Signature Mixes</p>
+        <h2 class="feature__title">The <span class="serif-italic">art</span> of the<br>perfect serve.</h2>
+        <p class="feature__text">
+          Cocktail bases developed with award-winning bartenders, bottled in small batches.
+          Each 750ml bottle makes sixteen serves — pair it with your spirit of choice and let your bar team perform.
+        </p>
+        <ul class="ticks ticks--gold">
+          <li>Cold-pressed juice, house-made cordials</li>
+          <li>16 serves per bottle, serving guide included</li>
+          <li>Custom-labelled editions for events</li>
+        </ul>
+      </div>
+
+      <div class="products">
+        <article class="product reveal">
+          <div class="product__visual product__visual--bottle" style="--c1:#c8553d;--c2:#3a0f0b">
+            <svg viewBox="0 0 100 140" aria-hidden="true"><rect x="40" y="4" width="20" height="16" fill="#d9b779"/><path d="M42 20 h16 v14 c0 8 20 14 20 32 v64 c0 5 -4 8 -8 8 h-40 c-4 0 -8 -3 -8 -8 v-64 c0 -18 20 -24 20 -32z" class="bottle"/><rect x="28" y="74" width="44" height="36" fill="#0d0908" stroke="#d9b779" stroke-width=".8"/></svg>
+          </div>
+          <h3 class="product__name">Velvet Hour</h3>
+          <p class="product__notes">Negroni base · blood orange · cacao</p>
+          <div class="product__foot"><span class="product__price">$48 <small>/ 750ml</small></span><button class="btn btn--sm btn--line" data-add="Velvet Hour Mix">Add</button></div>
+        </article>
+
+        <article class="product reveal">
+          <div class="product__visual product__visual--bottle" style="--c1:#d99a3f;--c2:#3d2208">
+            <svg viewBox="0 0 100 140" aria-hidden="true"><rect x="40" y="4" width="20" height="16" fill="#d9b779"/><path d="M42 20 h16 v14 c0 8 20 14 20 32 v64 c0 5 -4 8 -8 8 h-40 c-4 0 -8 -3 -8 -8 v-64 c0 -18 20 -24 20 -32z" class="bottle"/><rect x="28" y="74" width="44" height="36" fill="#0d0908" stroke="#d9b779" stroke-width=".8"/></svg>
+          </div>
+          <h3 class="product__name">Smoke &amp; Oak</h3>
+          <p class="product__notes">Old Fashioned base · smoked demerara · bitters</p>
+          <div class="product__foot"><span class="product__price">$52 <small>/ 750ml</small></span><button class="btn btn--sm btn--line" data-add="Smoke & Oak Mix">Add</button></div>
+        </article>
+
+        <article class="product reveal">
+          <div class="product__visual product__visual--bottle" style="--c1:#e8d7a0;--c2:#3b3416">
+            <svg viewBox="0 0 100 140" aria-hidden="true"><rect x="40" y="4" width="20" height="16" fill="#d9b779"/><path d="M42 20 h16 v14 c0 8 20 14 20 32 v64 c0 5 -4 8 -8 8 h-40 c-4 0 -8 -3 -8 -8 v-64 c0 -18 20 -24 20 -32z" class="bottle"/><rect x="28" y="74" width="44" height="36" fill="#0d0908" stroke="#d9b779" stroke-width=".8"/></svg>
+          </div>
+          <h3 class="product__name">Gilded Spritz</h3>
+          <p class="product__notes">Spritz base · yuzu · white peach · champagne acid</p>
+          <div class="product__foot"><span class="product__price">$46 <small>/ 750ml</small></span><button class="btn btn--sm btn--line" data-add="Gilded Spritz Mix">Add</button></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Ready to pour -->
+    <section class="feature feature--ready" id="ready">
+      <div class="feature__intro reveal">
+        <p class="eyebrow">03 — Ready to Pour</p>
+        <h2 class="feature__title">Crack. Pour.<br><span class="serif-italic">Impress.</span></h2>
+        <p class="feature__text">
+          Fully finished cocktails, balanced and diluted to bar spec. Slim cans for the cooler, 1L bottles for the table.
+          The drink you'd order at the best bar in town — without the bar.
+        </p>
+      </div>
+
+      <div class="ready-grid">
+        <article class="ready reveal">
+          <div class="ready__can" style="--c1:#1a1a1a;--c2:#d9b779"><span>Espresso<br>Martini</span></div>
+          <div class="ready__body">
+            <h3 class="product__name">Midnight Espresso Martini</h3>
+            <p class="product__notes">Vodka · cold brew · vanilla · 10.5% ABV</p>
+            <div class="product__foot"><span class="product__price">$42 <small>/ 4 × 250ml</small></span><button class="btn btn--sm btn--line" data-add="Midnight Espresso Martini">Add</button></div>
+          </div>
+        </article>
+        <article class="ready reveal">
+          <div class="ready__can" style="--c1:#6b1d1a;--c2:#f3ebe0"><span>Paloma<br>Rosa</span></div>
+          <div class="ready__body">
+            <h3 class="product__name">Paloma Rosa</h3>
+            <p class="product__notes">Blanco tequila · pink grapefruit · sea salt · 7% ABV</p>
+            <div class="product__foot"><span class="product__price">$38 <small>/ 4 × 250ml</small></span><button class="btn btn--sm btn--line" data-add="Paloma Rosa">Add</button></div>
+          </div>
+        </article>
+        <article class="ready reveal">
+          <div class="ready__can" style="--c1:#e9dfc9;--c2:#1a1310"><span>French<br>75</span></div>
+          <div class="ready__body">
+            <h3 class="product__name">Champagne French 75</h3>
+            <p class="product__notes">Gin · lemon · sparkling wine · 9% ABV</p>
+            <div class="product__foot"><span class="product__price">$58 <small>/ 1L bottle</small></span><button class="btn btn--sm btn--line" data-add="Champagne French 75">Add</button></div>
+          </div>
+        </article>
+        <article class="ready reveal">
+          <div class="ready__can" style="--c1:#2b3a2a;--c2:#e9cf95"><span>Gimlet<br>Noir</span></div>
+          <div class="ready__body">
+            <h3 class="product__name">Gimlet Noir</h3>
+            <p class="product__notes">London dry gin · lime cordial · black pepper · 12% ABV</p>
+            <div class="product__foot"><span class="product__price">$44 <small>/ 4 × 250ml</small></span><button class="btn btn--sm btn--line" data-add="Gimlet Noir">Add</button></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Events -->
+    <section class="section events" id="events">
+      <div class="events__grid">
+        <div class="events__copy reveal">
+          <p class="eyebrow">For events</p>
+          <h2 class="section__title">From the <span class="serif-italic">ballroom</span><br>to the <span class="display display--sm">warehouse.</span></h2>
+          <p class="feature__text">
+            We supply bars, bartenders and bespoke menus for events of 50 to 50,000. Custom labels, signature serves
+            named after your night, and logistics handled end-to-end — so you only have to host.
+          </p>
+          <a href="#enquire" class="btn btn--gold">Plan your event</a>
+        </div>
+
+        <div class="stats reveal">
+          <div class="stat"><span class="stat__num" data-count="400">0</span><span class="stat__plus">+</span><span class="stat__label">Events served</span></div>
+          <div class="stat"><span class="stat__num" data-count="1.2" data-decimals="1">0</span><span class="stat__plus">M</span><span class="stat__label">Cocktails poured</span></div>
+          <div class="stat"><span class="stat__num" data-count="36">0</span><span class="stat__label">Signature recipes</span></div>
+          <div class="stat"><span class="stat__num" data-count="48">0</span><span class="stat__plus">hr</span><span class="stat__label">Custom-label turnaround</span></div>
+        </div>
+      </div>
+
+      <div class="tiers">
+        <div class="tier reveal">
+          <h3 class="tier__name">Private</h3>
+          <p class="tier__range">50 – 300 guests</p>
+          <p>Dinners, weddings, launch nights. Custom menu, mixologist on site, glassware included.</p>
+        </div>
+        <div class="tier tier--featured reveal">
+          <h3 class="tier__name">Gala</h3>
+          <p class="tier__range">300 – 2,000 guests</p>
+          <p>Black-tie service with bespoke labelled bottles, champagne towers and a signature cocktail named for your night.</p>
+        </div>
+        <div class="tier tier--acid reveal">
+          <h3 class="tier__name">Rave &amp; Festival</h3>
+          <p class="tier__range">2,000+ guests</p>
+          <p>High-volume pouch and can service, glass-free bars and fast-lane stations built for peak hour.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="quote reveal">
+      <p class="quote__text">“The only thing people talked about more than the headliner was the drinks.”</p>
+      <p class="quote__by">— Event director, private warehouse series</p>
+    </section>
+
+    <!-- Enquiry -->
+    <section class="section enquire" id="enquire">
+      <div class="enquire__grid">
+        <div class="reveal">
+          <p class="eyebrow">Enquire</p>
+          <h2 class="section__title">Let's make your<br>night <span class="serif-italic">unforgettable.</span></h2>
+          <p class="feature__text">Tell us about your event and our team will come back within 24 hours with a tailored menu and quote.</p>
+        </div>
+        <form class="form reveal" id="enquiryForm" novalidate>
+          <div class="form__row">
+            <label>Name<input type="text" name="name" required autocomplete="name"></label>
+            <label>Email<input type="email" name="email" required autocomplete="email"></label>
+          </div>
+          <div class="form__row">
+            <label>Event type
+              <select name="type">
+                <option>Gala / black tie</option>
+                <option>Rave / festival</option>
+                <option>Wedding</option>
+                <option>Private party</option>
+                <option>Brand launch</option>
+                <option>Wholesale / retail</option>
+              </select>
+            </label>
+            <label>Guests<input type="number" name="guests" min="1" placeholder="e.g. 250"></label>
+          </div>
+          <label>Date<input type="date" name="date"></label>
+          <label>Tell us more<textarea name="message" rows="4" placeholder="Venue, vibe, anything we should know…"></textarea></label>
+          <button type="submit" class="btn btn--gold btn--block">Send enquiry</button>
+          <p class="form__status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <div>
+        <span class="wordmark wordmark--lg">JUICERS</span>
+        <p class="footer__tag">Cocktails for the after hours.</p>
+      </div>
+      <form class="newsletter" id="newsletter">
+        <label for="nlEmail" class="eyebrow">Join the guest list</label>
+        <div class="newsletter__field">
+          <input type="email" id="nlEmail" placeholder="your@email.com" required>
+          <button class="btn btn--gold btn--sm" type="submit">Join</button>
+        </div>
+      </form>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> Juicers. All rights reserved.</span>
+      <span>Please drink responsibly. Must be of legal drinking age.</span>
+      <span class="footer__social"><a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Contact</a></span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
