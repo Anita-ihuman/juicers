@@ -3,20 +3,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Juicers — Cocktails for the After Hours</title>
+  <title>Juicers — Good Drinks, Brighter Nights</title>
   <meta name="description" content="Crafted cocktails for high-end events, raves and everything after dark. Portable rave packs, signature cocktail mixes and ready-to-pour cocktails.">
+  <meta name="theme-color" content="#0B0D0C">
+  <meta property="og:title" content="Juicers — Good Drinks, Brighter Nights">
+  <meta property="og:description" content="Crafted cocktails for high-end events, raves and everything after dark.">
+  <meta property="og:image" content="assets/logo.jpeg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Syne:wght@500;700;800&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <!-- Shared SVG defs for packaging -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <linearGradient id="shine" x1="0" x2="1">
+        <stop offset="0" stop-color="#000" stop-opacity=".35"/>
+        <stop offset=".22" stop-color="#fff" stop-opacity="0"/>
+        <stop offset=".4" stop-color="#fff" stop-opacity=".2"/>
+        <stop offset=".52" stop-color="#fff" stop-opacity="0"/>
+        <stop offset="1" stop-color="#000" stop-opacity=".4"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
   <!-- Age gate -->
   <div class="age-gate" id="ageGate" role="dialog" aria-modal="true" aria-labelledby="ageTitle">
     <div class="age-gate__inner">
-      <span class="wordmark wordmark--lg">JUICERS</span>
-      <p class="eyebrow">Est. for the after hours</p>
+      <img src="assets/logo-cream.svg" alt="Juicers" class="age-gate__logo" width="1109" height="510">
+      <p class="logo-tagline">Good drinks <i class="dot"></i> Brighter nights</p>
       <h2 id="ageTitle" class="age-gate__title">Are you of legal drinking age?</h2>
       <div class="age-gate__actions">
         <button class="btn btn--gold" id="ageYes">Yes, enter</button>
@@ -28,7 +46,9 @@
 
   <!-- Nav -->
   <header class="nav" id="nav">
-    <a href="#top" class="wordmark">JUICERS</a>
+    <a href="#top" class="nav__logo" aria-label="Juicers home">
+      <img src="assets/logo-cream.svg" alt="Juicers" width="1109" height="510">
+    </a>
     <nav class="nav__links" id="navLinks">
       <a href="#collections">Collections</a>
       <a href="#rave">Rave Packs</a>
@@ -45,19 +65,19 @@
   <main id="top">
 
     <!-- Hero -->
-    <section class="hero">
+    <section class="hero dark">
       <div class="hero__glow hero__glow--a"></div>
       <div class="hero__glow hero__glow--b"></div>
       <div class="hero__content">
-        <p class="eyebrow reveal">Cocktails for the after hours</p>
+        <p class="eyebrow reveal">Good drinks <i class="dot"></i> Brighter nights</p>
         <h1 class="hero__title reveal">
-          <span class="serif-italic">Poured</span> for the<br>
-          <span class="display">night that</span><br>
-          <span class="display display--outline">never ends.</span>
+          <span class="italic">Good drinks,</span>
+          <span class="heavy">brighter</span>
+          <span class="heavy heavy--gold">nights.</span>
         </h1>
         <p class="hero__lede reveal">
           Bar-grade cocktails built to travel — from black-tie galas to warehouse floors at 4am.
-          Crafted with real spirits, cold-pressed juice and zero compromise.
+          Real spirits, cold-pressed citrus and zero compromise.
         </p>
         <div class="hero__actions reveal">
           <a href="#collections" class="btn btn--gold">Explore the collections</a>
@@ -65,35 +85,37 @@
         </div>
       </div>
 
-      <div class="hero__visual reveal" aria-hidden="true">
-        <!-- Stylised bottle -->
-        <svg viewBox="0 0 260 520" class="hero__bottle">
-          <defs>
-            <linearGradient id="glass" x1="0" x2="1">
-              <stop offset="0" stop-color="#1b1210"/>
-              <stop offset=".35" stop-color="#3a1d1a"/>
-              <stop offset=".55" stop-color="#6b2a22"/>
-              <stop offset="1" stop-color="#140c0b"/>
-            </linearGradient>
-            <linearGradient id="liquid" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stop-color="#c8553d"/>
-              <stop offset="1" stop-color="#5a1410"/>
-            </linearGradient>
-            <linearGradient id="goldG" x1="0" x2="1">
-              <stop offset="0" stop-color="#8f6b35"/>
-              <stop offset=".5" stop-color="#e9cf95"/>
-              <stop offset="1" stop-color="#8f6b35"/>
-            </linearGradient>
-          </defs>
-          <rect x="104" y="10" width="52" height="46" rx="4" fill="url(#goldG)"/>
-          <path d="M108 56 h44 v46 c0 22 58 40 58 92 v278 c0 20 -14 32 -32 32 h-96 c-18 0 -32 -12 -32 -32 v-278 c0 -52 58 -70 58 -92z" fill="url(#glass)" stroke="#e9cf95" stroke-opacity=".25"/>
-          <path d="M56 230 h148 v242 c0 14 -10 24 -24 24 h-100 c-14 0 -24 -10 -24 -24z" fill="url(#liquid)" opacity=".85"/>
-          <rect x="64" y="270" width="132" height="150" fill="#0d0908" stroke="url(#goldG)" stroke-width="1.5"/>
-          <text x="130" y="318" text-anchor="middle" fill="#e9cf95" font-family="Syne" font-weight="800" font-size="18" letter-spacing="4">JUICERS</text>
-          <line x1="90" y1="334" x2="170" y2="334" stroke="#e9cf95" stroke-opacity=".5"/>
-          <text x="130" y="362" text-anchor="middle" fill="#f3ebe0" font-family="Cormorant Garamond" font-style="italic" font-size="20">Velvet Hour</text>
-          <text x="130" y="398" text-anchor="middle" fill="#a99a88" font-family="Manrope" font-size="8" letter-spacing="2">NEGRONI · BLOOD ORANGE</text>
-          <path d="M84 110 c-10 30 -14 80 -14 120" stroke="#fff" stroke-opacity=".12" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <div class="lineup reveal" aria-hidden="true">
+        <!-- Pouch -->
+        <svg viewBox="0 0 120 210" class="lineup__pouch pack" style="--c1:#D4FF3A;--c2:#0B0D0C">
+          <circle cx="60" cy="14" r="10" class="pouch__ring"/>
+          <rect x="50" y="22" width="20" height="16" rx="3" class="pouch__spout"/>
+          <rect x="16" y="36" width="88" height="166" rx="22" class="pouch__body"/>
+          <rect x="16" y="36" width="88" height="166" rx="22" fill="url(#shine)"/>
+          <image href="assets/logo-cream.svg" x="24" y="84" width="72" height="33"/>
+          <text x="60" y="140" class="pack__flavour">Strobe</text>
+          <text x="60" y="156" class="pack__meta">RAVE PACK</text>
+        </svg>
+        <!-- Bottle -->
+        <svg viewBox="0 0 140 300" class="lineup__bottle pack" style="--c1:#C9A96E;--c2:#0E1411">
+          <rect x="56" y="4" width="28" height="30" rx="3" class="bottle__cap"/>
+          <path d="M58 34h24v26c0 14 38 26 38 62v160c0 8-6 14-14 14H34c-8 0-14-6-14-14V122c0-36 38-48 38-62z" class="bottle__glass"/>
+          <path d="M58 34h24v26c0 14 38 26 38 62v160c0 8-6 14-14 14H34c-8 0-14-6-14-14V122c0-36 38-48 38-62z" fill="url(#shine)"/>
+          <rect x="30" y="150" width="80" height="104" rx="2" class="bottle__label"/>
+          <image href="assets/logo-gold.svg" x="38" y="160" width="64" height="29.4"/>
+          <line x1="50" y1="198" x2="90" y2="198" class="bottle__rule"/>
+          <text x="70" y="220" style="font-size:12px" class="pack__flavour">Velvet Hour</text>
+          <text x="70" y="238" style="font-size:5px" class="pack__meta">NEGRONI BASE</text>
+        </svg>
+        <!-- Can -->
+        <svg viewBox="0 0 110 220" class="lineup__can pack" style="--c1:#123326;--c2:#0B0D0C">
+          <rect x="8" y="10" width="94" height="204" rx="12" class="can__body"/>
+          <rect x="8" y="10" width="94" height="204" rx="12" fill="url(#shine)"/>
+          <rect x="12" y="4" width="86" height="12" rx="5" class="can__rim"/>
+          <image href="assets/logo-gold.svg" x="15" y="66" width="80" height="36.8"/>
+          <text x="55" y="130" class="pack__flavour">Paloma</text>
+          <text x="55" y="148" class="pack__flavour">Rosa</text>
+          <text x="55" y="186" class="pack__meta">7% ABV · 250ML</text>
         </svg>
         <div class="hero__badge">
           <span class="hero__badge-num">100%</span>
@@ -105,59 +127,76 @@
     <!-- Marquee -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee__track">
-        <span>Galas</span><i>✦</i><span>Warehouse raves</span><i>✦</i><span>Private yachts</span><i>✦</i><span>Fashion week</span><i>✦</i><span>Festivals</span><i>✦</i><span>Launch nights</span><i>✦</i><span>Weddings</span><i>✦</i><span>Afterparties</span><i>✦</i>
-        <span>Galas</span><i>✦</i><span>Warehouse raves</span><i>✦</i><span>Private yachts</span><i>✦</i><span>Fashion week</span><i>✦</i><span>Festivals</span><i>✦</i><span>Launch nights</span><i>✦</i><span>Weddings</span><i>✦</i><span>Afterparties</span><i>✦</i>
+        <span>Galas</span><i></i><span>Warehouse raves</span><i></i><span>Private yachts</span><i></i><span>Fashion week</span><i></i><span>Festivals</span><i></i><span>Launch nights</span><i></i><span>Weddings</span><i></i><span>Afterparties</span><i></i>
+        <span>Galas</span><i></i><span>Warehouse raves</span><i></i><span>Private yachts</span><i></i><span>Fashion week</span><i></i><span>Festivals</span><i></i><span>Launch nights</span><i></i><span>Weddings</span><i></i><span>Afterparties</span><i></i>
       </div>
     </div>
 
     <!-- Collections overview -->
-    <section class="section" id="collections">
+    <section class="section alt" id="collections">
       <div class="section__head reveal">
         <p class="eyebrow">The collections</p>
-        <h2 class="section__title">Three ways to <span class="serif-italic">raise</span> the night.</h2>
+        <h2 class="section__title">Three ways to <em>brighten</em> the night.</h2>
       </div>
 
       <div class="collections">
-        <a href="#rave" class="collection collection--rave reveal">
+        <a href="#rave" class="collection reveal">
           <span class="collection__num">01</span>
           <div class="collection__art" aria-hidden="true">
-            <svg viewBox="0 0 120 160"><rect x="30" y="28" width="60" height="112" rx="14" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="60" cy="18" r="12" fill="none" stroke="currentColor" stroke-width="2"/><rect x="50" y="26" width="20" height="10" fill="currentColor"/><path d="M30 92 h60" stroke="currentColor" stroke-width="2"/><path d="M42 110 l8 -8 8 8 8 -8 8 8" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+            <svg viewBox="0 0 120 210" class="pack" style="--c1:#D4FF3A;--c2:#0B0D0C">
+              <circle cx="60" cy="14" r="10" class="pouch__ring"/>
+              <rect x="50" y="22" width="20" height="16" rx="3" class="pouch__spout"/>
+              <rect x="16" y="36" width="88" height="166" rx="22" class="pouch__body"/>
+              <rect x="16" y="36" width="88" height="166" rx="22" fill="url(#shine)"/>
+              <image href="assets/logo-cream.svg" x="24" y="96" width="72" height="33"/>
+            </svg>
           </div>
           <h3 class="collection__title">Rave Packs</h3>
-          <p class="collection__desc">Portable, clip-on cocktail pouches built for the dancefloor. Hands free, glass free, all night.</p>
+          <p class="collection__desc">Portable, clip-on cocktail pouches built for the dance floor. Hands free, glass free, all night.</p>
           <span class="collection__link">Shop rave packs →</span>
         </a>
 
-        <a href="#mixes" class="collection collection--mix reveal">
+        <a href="#mixes" class="collection reveal">
           <span class="collection__num">02</span>
           <div class="collection__art" aria-hidden="true">
-            <svg viewBox="0 0 120 160"><path d="M44 20 h32 v30 c0 8 18 16 18 34 v56 c0 6 -4 10 -10 10 h-48 c-6 0 -10 -4 -10 -10 v-56 c0 -18 18 -26 18 -34z" fill="none" stroke="currentColor" stroke-width="2"/><rect x="42" y="10" width="36" height="10" fill="currentColor"/><path d="M26 100 h68" stroke="currentColor" stroke-width="2"/></svg>
+            <svg viewBox="0 0 140 300" class="pack" style="--c1:#C9A96E;--c2:#0E1411">
+              <rect x="56" y="4" width="28" height="30" rx="3" class="bottle__cap"/>
+              <path d="M58 34h24v26c0 14 38 26 38 62v160c0 8-6 14-14 14H34c-8 0-14-6-14-14V122c0-36 38-48 38-62z" class="bottle__glass"/>
+              <path d="M58 34h24v26c0 14 38 26 38 62v160c0 8-6 14-14 14H34c-8 0-14-6-14-14V122c0-36 38-48 38-62z" fill="url(#shine)"/>
+              <rect x="30" y="150" width="80" height="104" rx="2" class="bottle__label"/>
+              <image href="assets/logo-gold.svg" x="38" y="176" width="64" height="29.4"/>
+            </svg>
           </div>
           <h3 class="collection__title">Signature Mixes</h3>
           <p class="collection__desc">Bar-crafted cocktail bases for galas, weddings and private dinners. Just add spirit, ice and theatre.</p>
           <span class="collection__link">Shop mixes →</span>
         </a>
 
-        <a href="#ready" class="collection collection--ready reveal">
+        <a href="#ready" class="collection reveal">
           <span class="collection__num">03</span>
           <div class="collection__art" aria-hidden="true">
-            <svg viewBox="0 0 120 160"><rect x="36" y="24" width="48" height="120" rx="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M40 24 c0 -8 40 -8 40 0" fill="none" stroke="currentColor" stroke-width="2"/><path d="M36 60 h48 M36 112 h48" stroke="currentColor" stroke-width="2"/><circle cx="60" cy="86" r="10" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+            <svg viewBox="0 0 110 220" class="pack" style="--c1:#5A1620;--c2:#0B0D0C">
+              <rect x="8" y="10" width="94" height="204" rx="12" class="can__body"/>
+              <rect x="8" y="10" width="94" height="204" rx="12" fill="url(#shine)"/>
+              <rect x="12" y="4" width="86" height="12" rx="5" class="can__rim"/>
+              <image href="assets/logo-gold.svg" x="15" y="92" width="80" height="36.8"/>
+            </svg>
           </div>
           <h3 class="collection__title">Ready to Pour</h3>
-          <p class="collection__desc">Finished cocktails in cans and bottles. Chill, crack, pour. Bartender-quality with zero setup.</p>
+          <p class="collection__desc">Finished cocktails in cans and bottles. Chill, crack, pour. Bartender quality with zero setup.</p>
           <span class="collection__link">Shop ready to pour →</span>
         </a>
       </div>
     </section>
 
     <!-- Rave packs -->
-    <section class="feature feature--rave" id="rave">
+    <section class="feature feature--rave dark" id="rave">
       <div class="feature__intro reveal">
-        <p class="eyebrow eyebrow--acid">01 — Rave Packs</p>
-        <h2 class="feature__title">Built for the<br><span class="display">dance floor.</span></h2>
+        <p class="eyebrow eyebrow--lime">01 — Rave Packs</p>
+        <h2 class="feature__title">Built for the <span class="heavy heavy--lime">dance floor.</span></h2>
         <p class="feature__text">
           Soft-pouch cocktails with a clip-on carabiner, resealable spout and a pack that fits a bumbag.
-          No glass, no spills, no queue at the bar. Each pack is sealed, portioned and ready the second the bass drops.
+          No glass, no spills, no queue at the bar. Sealed, portioned and ready the second the bass drops.
         </p>
         <ul class="ticks">
           <li>Shatterproof, festival-safe pouches</li>
@@ -167,75 +206,126 @@
       </div>
 
       <div class="products">
-        <article class="product product--acid reveal">
+        <article class="product product--glow reveal" style="--c1:#D4FF3A;--c2:#10140A">
           <div class="product__tag">Bestseller</div>
-          <div class="product__visual" style="--c1:#d4ff3a;--c2:#3a4d00">
-            <svg viewBox="0 0 100 140" aria-hidden="true"><circle cx="50" cy="12" r="8" fill="none" stroke="#d4ff3a" stroke-width="2"/><rect x="24" y="22" width="52" height="110" rx="16" class="pouch"/></svg>
+          <div class="product__visual">
+            <svg viewBox="0 0 120 210" class="pack" aria-hidden="true">
+              <circle cx="60" cy="14" r="10" class="pouch__ring"/>
+              <rect x="50" y="22" width="20" height="16" rx="3" class="pouch__spout"/>
+              <rect x="16" y="36" width="88" height="166" rx="22" class="pouch__body"/>
+              <rect x="16" y="36" width="88" height="166" rx="22" fill="url(#shine)"/>
+              <image href="assets/logo-cream.svg" x="24" y="84" width="72" height="33"/>
+              <text x="60" y="140" class="pack__flavour">Strobe</text>
+              <text x="60" y="156" class="pack__meta">TEQUILA · LIME</text>
+            </svg>
           </div>
           <h3 class="product__name">Strobe</h3>
           <p class="product__notes">Tequila · lime · green chilli · agave</p>
           <div class="product__foot"><span class="product__price">$64 <small>/ 6 pack</small></span><button class="btn btn--sm btn--line" data-add="Strobe Rave Pack">Add</button></div>
         </article>
 
-        <article class="product product--acid reveal">
-          <div class="product__visual" style="--c1:#ff3ec9;--c2:#4a0838">
-            <svg viewBox="0 0 100 140" aria-hidden="true"><circle cx="50" cy="12" r="8" fill="none" stroke="#ff3ec9" stroke-width="2"/><rect x="24" y="22" width="52" height="110" rx="16" class="pouch"/></svg>
+        <article class="product product--glow reveal" style="--c1:#FF3EA5;--c2:#1A0612">
+          <div class="product__visual">
+            <svg viewBox="0 0 120 210" class="pack" aria-hidden="true">
+              <circle cx="60" cy="14" r="10" class="pouch__ring"/>
+              <rect x="50" y="22" width="20" height="16" rx="3" class="pouch__spout"/>
+              <rect x="16" y="36" width="88" height="166" rx="22" class="pouch__body"/>
+              <rect x="16" y="36" width="88" height="166" rx="22" fill="url(#shine)"/>
+              <image href="assets/logo-cream.svg" x="24" y="84" width="72" height="33"/>
+              <text x="60" y="140" class="pack__flavour">Afterhours</text>
+              <text x="60" y="156" class="pack__meta">VODKA · PASSIONFRUIT</text>
+            </svg>
           </div>
           <h3 class="product__name">Afterhours</h3>
           <p class="product__notes">Vodka · passionfruit · yuzu · soda</p>
           <div class="product__foot"><span class="product__price">$64 <small>/ 6 pack</small></span><button class="btn btn--sm btn--line" data-add="Afterhours Rave Pack">Add</button></div>
         </article>
 
-        <article class="product product--acid reveal">
+        <article class="product product--glow reveal" style="--c1:#9B8CFF;--c2:#0F0B22">
           <div class="product__tag">New</div>
-          <div class="product__visual" style="--c1:#3ee6ff;--c2:#06303a">
-            <svg viewBox="0 0 100 140" aria-hidden="true"><circle cx="50" cy="12" r="8" fill="none" stroke="#3ee6ff" stroke-width="2"/><rect x="24" y="22" width="52" height="110" rx="16" class="pouch"/></svg>
+          <div class="product__visual">
+            <svg viewBox="0 0 120 210" class="pack" aria-hidden="true">
+              <circle cx="60" cy="14" r="10" class="pouch__ring"/>
+              <rect x="50" y="22" width="20" height="16" rx="3" class="pouch__spout"/>
+              <rect x="16" y="36" width="88" height="166" rx="22" class="pouch__body"/>
+              <rect x="16" y="36" width="88" height="166" rx="22" fill="url(#shine)"/>
+              <image href="assets/logo-cream.svg" x="24" y="84" width="72" height="33"/>
+              <text x="60" y="140" class="pack__flavour">Sub Bass</text>
+              <text x="60" y="156" class="pack__meta">GIN · LEMON</text>
+            </svg>
           </div>
           <h3 class="product__name">Sub Bass</h3>
-          <p class="product__notes">Gin · cucumber · elderflower · mint</p>
+          <p class="product__notes">Gin · Amalfi lemon · elderflower · mint</p>
           <div class="product__foot"><span class="product__price">$64 <small>/ 6 pack</small></span><button class="btn btn--sm btn--line" data-add="Sub Bass Rave Pack">Add</button></div>
         </article>
       </div>
     </section>
 
     <!-- Signature mixes -->
-    <section class="feature feature--mix" id="mixes">
+    <section class="feature feature--mix alt" id="mixes">
       <div class="feature__intro reveal">
         <p class="eyebrow">02 — Signature Mixes</p>
-        <h2 class="feature__title">The <span class="serif-italic">art</span> of the<br>perfect serve.</h2>
+        <h2 class="feature__title">The <em>art</em> of the perfect serve.</h2>
         <p class="feature__text">
           Cocktail bases developed with award-winning bartenders, bottled in small batches.
           Each 750ml bottle makes sixteen serves — pair it with your spirit of choice and let your bar team perform.
         </p>
-        <ul class="ticks ticks--gold">
-          <li>Cold-pressed juice, house-made cordials</li>
+        <ul class="ticks">
+          <li>Cold-pressed citrus, house-made cordials</li>
           <li>16 serves per bottle, serving guide included</li>
           <li>Custom-labelled editions for events</li>
         </ul>
       </div>
 
       <div class="products">
-        <article class="product reveal">
-          <div class="product__visual product__visual--bottle" style="--c1:#c8553d;--c2:#3a0f0b">
-            <svg viewBox="0 0 100 140" aria-hidden="true"><rect x="40" y="4" width="20" height="16" fill="#d9b779"/><path d="M42 20 h16 v14 c0 8 20 14 20 32 v64 c0 5 -4 8 -8 8 h-40 c-4 0 -8 -3 -8 -8 v-64 c0 -18 20 -24 20 -32z" class="bottle"/><rect x="28" y="74" width="44" height="36" fill="#0d0908" stroke="#d9b779" stroke-width=".8"/></svg>
+        <article class="product reveal" style="--c1:#C9A96E;--c2:#0E1411">
+          <div class="product__visual">
+            <svg viewBox="0 0 140 300" class="pack" aria-hidden="true">
+              <rect x="56" y="4" width="28" height="30" rx="3" class="bottle__cap"/>
+              <path d="M58 34h24v26c0 14 38 26 38 62v160c0 8-6 14-14 14H34c-8 0-14-6-14-14V122c0-36 38-48 38-62z" class="bottle__glass"/>
+              <path d="M58 34h24v26c0 14 38 26 38 62v160c0 8-6 14-14 14H34c-8 0-14-6-14-14V122c0-36 38-48 38-62z" fill="url(#shine)"/>
+              <rect x="30" y="150" width="80" height="104" rx="2" class="bottle__label"/>
+              <image href="assets/logo-gold.svg" x="38" y="160" width="64" height="29.4"/>
+              <line x1="50" y1="198" x2="90" y2="198" class="bottle__rule"/>
+              <text x="70" y="220" style="font-size:12px" class="pack__flavour">Velvet Hour</text>
+              <text x="70" y="238" style="font-size:5px" class="pack__meta">NEGRONI BASE</text>
+            </svg>
           </div>
           <h3 class="product__name">Velvet Hour</h3>
           <p class="product__notes">Negroni base · blood orange · cacao</p>
           <div class="product__foot"><span class="product__price">$48 <small>/ 750ml</small></span><button class="btn btn--sm btn--line" data-add="Velvet Hour Mix">Add</button></div>
         </article>
 
-        <article class="product reveal">
-          <div class="product__visual product__visual--bottle" style="--c1:#d99a3f;--c2:#3d2208">
-            <svg viewBox="0 0 100 140" aria-hidden="true"><rect x="40" y="4" width="20" height="16" fill="#d9b779"/><path d="M42 20 h16 v14 c0 8 20 14 20 32 v64 c0 5 -4 8 -8 8 h-40 c-4 0 -8 -3 -8 -8 v-64 c0 -18 20 -24 20 -32z" class="bottle"/><rect x="28" y="74" width="44" height="36" fill="#0d0908" stroke="#d9b779" stroke-width=".8"/></svg>
+        <article class="product reveal" style="--c1:#B08D57;--c2:#2A160B">
+          <div class="product__visual">
+            <svg viewBox="0 0 140 300" class="pack" aria-hidden="true">
+              <rect x="56" y="4" width="28" height="30" rx="3" class="bottle__cap"/>
+              <path d="M58 34h24v26c0 14 38 26 38 62v160c0 8-6 14-14 14H34c-8 0-14-6-14-14V122c0-36 38-48 38-62z" class="bottle__glass"/>
+              <path d="M58 34h24v26c0 14 38 26 38 62v160c0 8-6 14-14 14H34c-8 0-14-6-14-14V122c0-36 38-48 38-62z" fill="url(#shine)"/>
+              <rect x="30" y="150" width="80" height="104" rx="2" class="bottle__label"/>
+              <image href="assets/logo-gold.svg" x="38" y="160" width="64" height="29.4"/>
+              <line x1="50" y1="198" x2="90" y2="198" class="bottle__rule"/>
+              <text x="70" y="220" style="font-size:12px" class="pack__flavour">Smoke &amp; Oak</text>
+              <text x="70" y="238" style="font-size:5px" class="pack__meta">OLD FASHIONED BASE</text>
+            </svg>
           </div>
           <h3 class="product__name">Smoke &amp; Oak</h3>
           <p class="product__notes">Old Fashioned base · smoked demerara · bitters</p>
           <div class="product__foot"><span class="product__price">$52 <small>/ 750ml</small></span><button class="btn btn--sm btn--line" data-add="Smoke & Oak Mix">Add</button></div>
         </article>
 
-        <article class="product reveal">
-          <div class="product__visual product__visual--bottle" style="--c1:#e8d7a0;--c2:#3b3416">
-            <svg viewBox="0 0 100 140" aria-hidden="true"><rect x="40" y="4" width="20" height="16" fill="#d9b779"/><path d="M42 20 h16 v14 c0 8 20 14 20 32 v64 c0 5 -4 8 -8 8 h-40 c-4 0 -8 -3 -8 -8 v-64 c0 -18 20 -24 20 -32z" class="bottle"/><rect x="28" y="74" width="44" height="36" fill="#0d0908" stroke="#d9b779" stroke-width=".8"/></svg>
+        <article class="product reveal" style="--c1:#C9A96E;--c2:#16301F">
+          <div class="product__visual">
+            <svg viewBox="0 0 140 300" class="pack" aria-hidden="true">
+              <rect x="56" y="4" width="28" height="30" rx="3" class="bottle__cap"/>
+              <path d="M58 34h24v26c0 14 38 26 38 62v160c0 8-6 14-14 14H34c-8 0-14-6-14-14V122c0-36 38-48 38-62z" class="bottle__glass"/>
+              <path d="M58 34h24v26c0 14 38 26 38 62v160c0 8-6 14-14 14H34c-8 0-14-6-14-14V122c0-36 38-48 38-62z" fill="url(#shine)"/>
+              <rect x="30" y="150" width="80" height="104" rx="2" class="bottle__label"/>
+              <image href="assets/logo-gold.svg" x="38" y="160" width="64" height="29.4"/>
+              <line x1="50" y1="198" x2="90" y2="198" class="bottle__rule"/>
+              <text x="70" y="220" style="font-size:12px" class="pack__flavour">Gilded Spritz</text>
+              <text x="70" y="238" style="font-size:5px" class="pack__meta">SPRITZ BASE</text>
+            </svg>
           </div>
           <h3 class="product__name">Gilded Spritz</h3>
           <p class="product__notes">Spritz base · yuzu · white peach · champagne acid</p>
@@ -245,10 +335,10 @@
     </section>
 
     <!-- Ready to pour -->
-    <section class="feature feature--ready" id="ready">
+    <section class="feature feature--ready dark" id="ready">
       <div class="feature__intro reveal">
         <p class="eyebrow">03 — Ready to Pour</p>
-        <h2 class="feature__title">Crack. Pour.<br><span class="serif-italic">Impress.</span></h2>
+        <h2 class="feature__title">Crack. Pour. <em>Impress.</em></h2>
         <p class="feature__text">
           Fully finished cocktails, balanced and diluted to bar spec. Slim cans for the cooler, 1L bottles for the table.
           The drink you'd order at the best bar in town — without the bar.
@@ -256,32 +346,64 @@
       </div>
 
       <div class="ready-grid">
-        <article class="ready reveal">
-          <div class="ready__can" style="--c1:#1a1a1a;--c2:#d9b779"><span>Espresso<br>Martini</span></div>
+        <article class="ready reveal" style="--c1:#111412;--c2:#0B0D0C">
+          <svg viewBox="0 0 110 220" class="pack ready__can" aria-hidden="true">
+            <rect x="8" y="10" width="94" height="204" rx="12" class="can__body"/>
+            <rect x="8" y="10" width="94" height="204" rx="12" fill="url(#shine)"/>
+            <rect x="12" y="4" width="86" height="12" rx="5" class="can__rim"/>
+            <image href="assets/logo-gold.svg" x="15" y="66" width="80" height="36.8"/>
+            <text x="55" y="130" class="pack__flavour">Espresso</text>
+            <text x="55" y="148" class="pack__flavour">Martini</text>
+            <text x="55" y="186" class="pack__meta">10.5% ABV · 250ML</text>
+          </svg>
           <div class="ready__body">
             <h3 class="product__name">Midnight Espresso Martini</h3>
             <p class="product__notes">Vodka · cold brew · vanilla · 10.5% ABV</p>
             <div class="product__foot"><span class="product__price">$42 <small>/ 4 × 250ml</small></span><button class="btn btn--sm btn--line" data-add="Midnight Espresso Martini">Add</button></div>
           </div>
         </article>
-        <article class="ready reveal">
-          <div class="ready__can" style="--c1:#6b1d1a;--c2:#f3ebe0"><span>Paloma<br>Rosa</span></div>
+        <article class="ready reveal" style="--c1:#5A1620;--c2:#0B0D0C">
+          <svg viewBox="0 0 110 220" class="pack ready__can" aria-hidden="true">
+            <rect x="8" y="10" width="94" height="204" rx="12" class="can__body"/>
+            <rect x="8" y="10" width="94" height="204" rx="12" fill="url(#shine)"/>
+            <rect x="12" y="4" width="86" height="12" rx="5" class="can__rim"/>
+            <image href="assets/logo-gold.svg" x="15" y="66" width="80" height="36.8"/>
+            <text x="55" y="130" class="pack__flavour">Paloma</text>
+            <text x="55" y="148" class="pack__flavour">Rosa</text>
+            <text x="55" y="186" class="pack__meta">7% ABV · 250ML</text>
+          </svg>
           <div class="ready__body">
             <h3 class="product__name">Paloma Rosa</h3>
             <p class="product__notes">Blanco tequila · pink grapefruit · sea salt · 7% ABV</p>
             <div class="product__foot"><span class="product__price">$38 <small>/ 4 × 250ml</small></span><button class="btn btn--sm btn--line" data-add="Paloma Rosa">Add</button></div>
           </div>
         </article>
-        <article class="ready reveal">
-          <div class="ready__can" style="--c1:#e9dfc9;--c2:#1a1310"><span>French<br>75</span></div>
+        <article class="ready reveal" style="--c1:#E6DAC0;--c2:#0B0D0C">
+          <svg viewBox="0 0 110 220" class="pack ready__can" aria-hidden="true">
+            <rect x="8" y="10" width="94" height="204" rx="12" class="can__body"/>
+            <rect x="8" y="10" width="94" height="204" rx="12" fill="url(#shine)"/>
+            <rect x="12" y="4" width="86" height="12" rx="5" class="can__rim"/>
+            <image href="assets/logo-ink.svg" x="15" y="66" width="80" height="36.8"/>
+            <text x="55" y="130" class="pack__flavour pack__flavour--dark">French</text>
+            <text x="55" y="148" class="pack__flavour pack__flavour--dark">75</text>
+            <text x="55" y="186" class="pack__meta pack__meta--dark">9% ABV · 1L</text>
+          </svg>
           <div class="ready__body">
             <h3 class="product__name">Champagne French 75</h3>
             <p class="product__notes">Gin · lemon · sparkling wine · 9% ABV</p>
             <div class="product__foot"><span class="product__price">$58 <small>/ 1L bottle</small></span><button class="btn btn--sm btn--line" data-add="Champagne French 75">Add</button></div>
           </div>
         </article>
-        <article class="ready reveal">
-          <div class="ready__can" style="--c1:#2b3a2a;--c2:#e9cf95"><span>Gimlet<br>Noir</span></div>
+        <article class="ready reveal" style="--c1:#123326;--c2:#0B0D0C">
+          <svg viewBox="0 0 110 220" class="pack ready__can" aria-hidden="true">
+            <rect x="8" y="10" width="94" height="204" rx="12" class="can__body"/>
+            <rect x="8" y="10" width="94" height="204" rx="12" fill="url(#shine)"/>
+            <rect x="12" y="4" width="86" height="12" rx="5" class="can__rim"/>
+            <image href="assets/logo-gold.svg" x="15" y="66" width="80" height="36.8"/>
+            <text x="55" y="130" class="pack__flavour">Gimlet</text>
+            <text x="55" y="148" class="pack__flavour">Noir</text>
+            <text x="55" y="186" class="pack__meta">12% ABV · 250ML</text>
+          </svg>
           <div class="ready__body">
             <h3 class="product__name">Gimlet Noir</h3>
             <p class="product__notes">London dry gin · lime cordial · black pepper · 12% ABV</p>
@@ -292,11 +414,11 @@
     </section>
 
     <!-- Events -->
-    <section class="section events" id="events">
+    <section class="section events alt" id="events">
       <div class="events__grid">
         <div class="events__copy reveal">
           <p class="eyebrow">For events</p>
-          <h2 class="section__title">From the <span class="serif-italic">ballroom</span><br>to the <span class="display display--sm">warehouse.</span></h2>
+          <h2 class="section__title">From the <em>ballroom</em> to the <span class="heavy">warehouse.</span></h2>
           <p class="feature__text">
             We supply bars, bartenders and bespoke menus for events of 50 to 50,000. Custom labels, signature serves
             named after your night, and logistics handled end-to-end — so you only have to host.
@@ -323,7 +445,7 @@
           <p class="tier__range">300 – 2,000 guests</p>
           <p>Black-tie service with bespoke labelled bottles, champagne towers and a signature cocktail named for your night.</p>
         </div>
-        <div class="tier tier--acid reveal">
+        <div class="tier reveal">
           <h3 class="tier__name">Rave &amp; Festival</h3>
           <p class="tier__range">2,000+ guests</p>
           <p>High-volume pouch and can service, glass-free bars and fast-lane stations built for peak hour.</p>
@@ -338,11 +460,11 @@
     </section>
 
     <!-- Enquiry -->
-    <section class="section enquire" id="enquire">
+    <section class="section enquire dark" id="enquire">
       <div class="enquire__grid">
         <div class="reveal">
           <p class="eyebrow">Enquire</p>
-          <h2 class="section__title">Let's make your<br>night <span class="serif-italic">unforgettable.</span></h2>
+          <h2 class="section__title">Let's make your night <em>unforgettable.</em></h2>
           <p class="feature__text">Tell us about your event and our team will come back within 24 hours with a tailored menu and quote.</p>
         </div>
         <form class="form reveal" id="enquiryForm" novalidate>
@@ -373,11 +495,11 @@
 
   </main>
 
-  <footer class="footer">
+  <footer class="footer dark">
     <div class="footer__top">
       <div>
-        <span class="wordmark wordmark--lg">JUICERS</span>
-        <p class="footer__tag">Cocktails for the after hours.</p>
+        <img src="assets/logo-cream.svg" alt="Juicers" class="footer__logo" width="1109" height="510">
+        <p class="logo-tagline logo-tagline--left">Good drinks <i class="dot"></i> Brighter nights</p>
       </div>
       <form class="newsletter" id="newsletter">
         <label for="nlEmail" class="eyebrow">Join the guest list</label>
